@@ -40,7 +40,7 @@ public:
     }
     
     //Function to insert new node
-    //Takes two node referernces as parameters
+    //Takes two node pointers as parameters
     void insertnode(struct Node *tmp1, struct Node *tmp2) {
         //If tmp1 is greater insert on left side
         if(tmp1->data > tmp2->data) {
@@ -68,7 +68,7 @@ public:
     }
         
     //Function to traverse bst inorder
-    //Takes node ref as parameter
+    //Takes node pointer as parameter
     void inordertraverse(struct Node *tmp) {
         if(tmp != NULL ) {
             inordertraverse(tmp->lchild);
@@ -78,8 +78,8 @@ public:
     }
     
     //Function to find max
-    //Takes node ref as parameter
-    //Returns max node
+    //Takes node pointer as parameter
+    //Returns max node pointer
     struct Node *maxnode(struct Node *tmp) {
         struct Node *tl, *tr {};
         
@@ -113,7 +113,7 @@ public:
     }
     
     //Fuction to delete node using predecessor
-    //Takes node ref as a parameter
+    //Takes node pointer as a parameter
     void deletenode (struct Node *tmp) {
         //Check if tmp is a leaf or only node
         if(tmp->lchild == NULL && tmp->rchild == NULL) {
@@ -158,8 +158,8 @@ public:
     }
     
     //Function to find node
-    //Takes starting node ref and integer val of interest as parameters
-    //Returns the ref to the node of interest
+    //Takes starting node pointer and integer value of interest as parameters
+    //Returns the pointer to the node of interest
     struct Node *findnode(struct Node *tmp, int val) {
         if(val > tmp->data) {
             return findnode(tmp->rchild, val);
