@@ -81,7 +81,8 @@ public:
     //Takes node pointer as parameter
     //Returns max node pointer
     struct Node *maxnode(struct Node *tmp) {
-        struct Node *tl, *tr {};
+        struct Node *tl; 
+        struct Node *tr;
         
         if(tmp->lchild == NULL && tmp->rchild == NULL) {
             return tmp;
